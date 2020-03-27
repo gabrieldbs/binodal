@@ -3,6 +3,7 @@ real*8 delta   ! delta is the discretization lenght in z direction
 integer  dimz  ! number of lattice sites in z direction
 real*8 sigmaA
 real*8 Ma
+integer yes
 real*8 Mb
 integer npasos
 real*8 sigmaB
@@ -15,10 +16,15 @@ real*16 pkEo
 real*16 Keo
 real*16 pHbulk
 real*8 st
+integer VUELTA
 endmodule
 
 module results
 real*8 x2alphafixed
+real*8 x3alphafixed
+real*8 arrayalpha(2,20000)
+real*8 arraybeta(2,20000)
+integer conteo
 endmodule
 
 module const

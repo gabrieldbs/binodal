@@ -47,7 +47,8 @@
       enddo
 
       do i = dimz+1, 2*dimz
-         pp(i) = 1.0
+          pp(i) = 1.0
+  !        pp(i)= 0.1 / (1.0+(1.0-udata(i))*exp(1.0-udata(i)))
       enddo
 
       do i = 2*dimz+1,3*dimz
@@ -73,17 +74,13 @@
       implicit none
 
       real*8 x1(3*dimz), xg1(3*dimz)
-
       integer*8 iout(15) ! Kinsol additional output information
       real*8 rout(2) ! Kinsol additional out information
-
       integer*8 msbpre
       real*8 fnormtol, scsteptol
       real*8 scale(3*dimz)
       real*8 constr(3*dimz)
-
       integer*4  globalstrat, maxl, maxlrst
-
       integer *4 ier ! Kinsol error flag
       integer *8 neq ! Kinsol number of equations
       integer i
@@ -99,14 +96,12 @@
 
       maxl = 500 ! maximum Krylov subspace dimesion
       maxlrst = 2 ! maximum number of restarts
-
       globalstrat = 0
-
+      
       call fnvinits(3, neq, ier) ! fnvinits inits NVECTOR module
       if (ier .ne. 0) then       ! 3 for Kinsol, neq ecuantion number, ier error flag (0 is OK)
-      print*, 'SUNDIALS_ERROR: FNVINITS returned IER = ', ier
-         stop
-
+        print*, 'SUNDIALS_ERROR: FNVINITS returned IER = ', ier
+        stop
       endif
 
       call fkinmalloc(iout, rout, ier)    ! Allocates memory and output additional information
@@ -131,6 +126,8 @@
          enddo
 
 
+
+
          call fkinsetvin('CONSTR_VEC', constr, ier) ! constraint vector
 
 !       CALL FKINSPTFQMR (MAXL, IER)
@@ -144,6 +141,7 @@
          stop
       endif
       call fkinspilssetprec(1, ier) ! preconditioner
+
 
       do i = 1, neq ! scaling vector
       scale(i) = 1.0
@@ -162,6 +160,7 @@
       call fkinfree ! free memory
 
       endif
+
 
       return
       end subroutine

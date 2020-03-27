@@ -18,5 +18,6 @@ call fracasos(x,frac)
 fa_A=frac(1)
 fa_B=frac(2)
 potquim2= log(xmphiA*vs)-(Ma*vp/vs)*log(xsolv)+Ma*log(1.-fa_A)
-
+!prpint* ,fa_A,fa_b,potquim2
+!stop
 end  subroutine 
