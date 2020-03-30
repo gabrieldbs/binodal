@@ -1,6 +1,6 @@
 subroutine solve(flagcrash)
 
-use pks 
+!use pks 
 use system
 use results
 use solver

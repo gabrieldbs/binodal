@@ -11,7 +11,7 @@ subroutine allocation
 use system
 !use chainsdat
 use solver
-!use results
+use results
 use mkinsol
 implicit none
 

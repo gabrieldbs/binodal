@@ -1,6 +1,6 @@
 TARGET = brush
 
-SRC = allocation.f90 modules.f90 fkfun.f90 kinsol.f90  main.f90 solve.f90 fe.f90 readinput.f90 mu2.f90 mu3.f90 fracasos.f90 salvar.f90 checksol.f90
+SRC = modules.f90  allocation.f90 fkfun.f90 kinsol.f90  main.f90 solve.f90 fe.f90 readinput.f90 mu2.f90 mu3.f90 fracasos.f90 salvar.f90 checksol.f90
 
 
 HOST=$(shell hostname)

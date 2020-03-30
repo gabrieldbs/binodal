@@ -5,7 +5,7 @@ subroutine readinput
 !  This routine reads variables from fort.8
 !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-use pks
+!use pks
 use system
 use solver
 !use kai
