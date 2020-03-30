@@ -28,7 +28,7 @@ real*8 xpotA(dimz),fdisbc,fdisAC
 real*8 xpotB(dimz)
 !real*16 psi2(0:dimz+1) ! psi plus boundaries at z=0 and dimz+1
 !real*8 xtotal(-Xulimit:dimz+Xulimit) ! xtotal for poor solvent
-real*16 m, eta, Penality
+real*8 m, eta, Penality
 ! Kinsol
 integer*4 ier
 real*8 vectalpha(2),vectbeta(2)
@@ -65,8 +65,8 @@ vectbeta(1)=x2beta
 vectbeta(2)=x3beta
 
 ! Pot quimico respecto de phiA 
-Penality=(x2alpha-x2beta)**2+(x3alpha-x3beta)**2
-
+Penality=((x2alpha-x2beta)**2+(x3alpha-x3beta)**2)
+!Penality=1.
 call mu2(vectalpha,potquim2)
 mu2alpha = potquim2
 !print*,mu2alpha

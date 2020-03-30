@@ -1,6 +1,7 @@
 subroutine fracasos(x,frac)
 use system
 use const
+ implicit none
 
 real*8 frac(2),x(2)
 real*8 xphiA,xphiB,xmphiA,xmphiB

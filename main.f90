@@ -16,22 +16,16 @@ use const
 	integer i, flagcrash
 	!print*, 'Program Simple Brush'
 	!print*, 'GIT Version: ', _VERSION
-yes=0
+yes=0 ! es para  chequear si encuentra o no xalpha, xbeta
 flagcrash=1
 	call readinput  ! reads input variables from file
-	!call init       ! initialize system dependent variables
 	call allocation ! allocates memory
-	!call kais       ! generates coefficients for poor-sv interactions
-	!call creador    ! create chains conformationsi
 	Keo=10**(-pKeo)
 	call solve(flagcrash)
 	!call fe(cc, ccc)         ! calculates and saves free energy to disk
 	call salvar(flagcrash)
 	print*, 'Save OK',yes
-    ! call solve               ! solves the molecular theory
-    ! save results to disk
-    ! END HERE LOOP
-call endall     ! clean up and terminate
+	call endall     ! clean up and terminate
 end
 subroutine endall
 stop

@@ -2,7 +2,7 @@
 subroutine mu3(x,potquim3)
 use const
 use system
-
+implicit none
 real*8 x(2)
 real*8 potquim3,fa_A,fa_B
 real*8 xphiA,xphiB,xmphiA,xmphiB,xsolv

@@ -20,10 +20,10 @@ read(8,*), basura
 read(8,*), dimz    ! dimz==1 por como está escrito conviene dejar dimz
 
 read(8,*), basura
-read(8,*), Ma    ! Chains polA
+read(8,*), Ma    ! Ma  polA
 
 read(8, *), basura
-read(8, *), Mb  !   Chains polB
+read(8, *), Mb  !   Mb  polB
 
 read(8, *), basura
 read(8, *), npasos  !   Npasos

@@ -8,22 +8,23 @@ real*8 Mb
 integer npasos
 real*8 sigmaB
 real*8 csalt
-real*16 pKaA
-real*16 pkaB
-real*16 pKaANa
-real*16 pkaBCl
+real*8 nor
+!real*16 pKaA
+!real*16 pkaB
+!real*16 pKaANa
+!real*16 pkaBCl
 real*16 pkEo
 real*16 Keo
 real*16 pHbulk
-real*8 st
+!real*8 st
 integer VUELTA
 endmodule
 
 module results
 real*8 x2alphafixed
 real*8 x3alphafixed
-real*8 arrayalpha(2,20000)
-real*8 arraybeta(2,20000)
+real*8 arrayalpha(2,60000)
+real*8 arraybeta(2,60000)
 integer conteo
 endmodule
 

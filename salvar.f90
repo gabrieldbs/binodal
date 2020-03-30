@@ -1,7 +1,7 @@
 subroutine salvar(flagcrash)
 use results
-
-integer i,j
+implicit none
+integer i,j,flagcrash
 open (unit=1,file='alphaarray.txt',status='replace')
 
 do i=1,conteo
