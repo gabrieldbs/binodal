@@ -33,7 +33,7 @@ febeta=elib
 elib=0
 
 Penalty=((xatest(1)-xbtest(1))**2+(xatest(2)-xbtest(2))**2)
-!Penalty=1.
+!Penalty=1./1000
 f1= (mu2alpha-mu2beta)/Penalty
 nor=nor + f1**2
 f2= (mu3alpha-mu3beta)/Penalty

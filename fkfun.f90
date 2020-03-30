@@ -66,7 +66,7 @@ vectbeta(2)=x3beta
 
 ! Pot quimico respecto de phiA 
 Penality=((x2alpha-x2beta)**2+(x3alpha-x3beta)**2)
-!Penality=1.
+!Penality=1/100000.
 call mu2(vectalpha,potquim2)
 mu2alpha = potquim2
 !print*,mu2alpha

@@ -21,10 +21,10 @@ integer VUELTA
 endmodule
 
 module results
-real*8 x2alphafixed
-real*8 x3alphafixed
-real*8 arrayalpha(2,60000)
-real*8 arraybeta(2,60000)
+real*16 x2alphafixed
+real*16 x3alphafixed
+real*16 arrayalpha(2,40000)
+real*16 arraybeta(2,40000)
 integer conteo
 endmodule
 
